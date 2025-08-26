@@ -31,11 +31,13 @@
     <section id="hero" class="d-flex align-items-center justify-content-center text-center text-white position-relative" style="background-image: url('./sanamante_hero.png'); background-size: cover; background-position: center; height: 100vh;">
         <div class="hero-overlay position-absolute w-100 h-100"></div>
         <div class="container position-relative" style="z-index: 2;">
-            <h2 class="display-6 text-shadow fade-in-up">SanaMente22222</h2>
+            <h2 class="display-6 text-shadow fade-in-up">SanaMente</h2>
             <h1 class="display-4 text-shadow fade-in-up">Un espacio humano para redescubrir tu potencial</h1>
             <p class="lead text-shadow fade-in-up">Psicología online y a domicilio en Antioquia. Terapia cálida, cercana y adaptada a tu vida.</p>
             <a href="#contact" class="btn btn-light btn-lg mt-3 fade-in-up" role="button">Agenda tu primera sesión</a>
         </div>
+
+       
     </section>
 
     <!-- Unique Value Proposition (UVP) -->
@@ -58,6 +60,34 @@
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
                         <h3 class="h5">🎓 Profesionales certificados</h3>
                         <p>Contamos con Registro ReTHUS y formación universitaria en psicología.</p>
+
+ <form name="contact-form" method="post" class="form" action="https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec" >
+    <h1 class="title">Bienvenidos</h1>
+    <h3 class="subtitle">¡Vamos, crea una cuenta!</h3>
+    <div class="input-container ic1">
+        <input name="Nombre" id="firstname" class="input" type="text" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">Nombre</label>
+    </div>
+    <div class="input-container ic2">
+        <input name="Apellido" id="lastname" class="input" type="text" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="lastname" class="placeholder">Apellido</label>
+    </div>
+    <div class="input-container ic2">
+        <input name="Email" id="email" class="input" type="text" placeholder=" "/>
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">Email</label>
+    </div>
+    <button type="submit" class="submit">submit</button>
+</form>
+
+
+
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -202,28 +232,28 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                         </div>
                         <div class="modal-body text-start">
-                            <form id="contactForm" novalidate>
+                            <form name="contact-form" method="post" id="contactForm" action="https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec" novalidate>
                                 <div class="mb-3">
                                     <label for="fullName" class="form-label">Nombre Completo *</label>
-                                    <input type="text" class="form-control" id="fullName" required>
+                                    <input name="nombre" type="text" class="form-control" id="fullName" required>
                                     <div class="invalid-feedback">
                                         Por favor ingresa tu nombre completo.
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="emailAddress" class="form-label">Correo Electrónico *</label>
-                                    <input type="email" class="form-control" id="emailAddress" required>
+                                    <input name="correo" type="email" class="form-control" id="emailAddress" required>
                                     <div class="invalid-feedback">
                                         Por favor ingresa un correo electrónico válido.
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="phoneNumber" class="form-label">Teléfono</label>
-                                    <input type="tel" class="form-control" id="phoneNumber">
+                                    <input name="telefono" type="tel" class="form-control" id="phoneNumber">
                                 </div>
                                 <div class="mb-3">
                                     <label for="message" class="form-label">Mensaje</label>
-                                    <textarea class="form-control" id="message" rows="3" placeholder="Cuéntanos brevemente cómo podemos ayudarte..."></textarea>
+                                    <textarea name="mensaje" class="form-control" id="message" rows="3" placeholder="Cuéntanos brevemente cómo podemos ayudarte..."></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Enviar</button>
                             </form>
@@ -236,6 +266,8 @@
 
     <!-- Bootstrap JS desde CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+
     
     <!-- JavaScript personalizado -->
     <script>
