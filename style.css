@@ -1,0 +1,375 @@
+/* Fuente moderna y legible */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Variables CSS para colores nude */
+:root {
+    --nude-light: #f5f5dc; /* Beige claro */
+    --nude-medium: #e0d8c7; /* Beige medio */
+    --nude-dark: #d4c9b6; /* Beige oscuro */
+    --nude-text: #5c5c5c; /* Gris para texto */
+    --nude-accent: #a08d7b; /* Tono más oscuro para acentos */
+    --nude-accent-hover: #8a7a6b; /* Hover state */
+}
+
+/* Estilos de fondo */
+.bg-light {
+    background-color: var(--nude-light) !important;
+}
+
+/* Estilos de botones */
+.btn-primary {
+    background-color: var(--nude-accent);
+    border-color: var(--nude-accent);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--nude-accent-hover);
+    border-color: var(--nude-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-light {
+    background-color: #fff;
+    border-color: #fff;
+    color: var(--nude-accent);
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    background-color: var(--nude-medium);
+    border-color: var(--nude-medium);
+    color: var(--nude-accent);
+    transform: translateY(-2px);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del Hero */
+#hero {
+    min-height: 100vh;
+    background-color: var(--nude-medium);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#hero h2 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--nude-dark);
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+/* Overlay del hero con gradiente mejorado */
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(160, 141, 123, 0.8), rgba(212, 201, 182, 0.6));
+    backdrop-filter: blur(1px);
+}
+
+/* Estilos de secciones */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Estilos de tarjetas con hover mejorado */
+.card-hover {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-color: var(--nude-accent);
+}
+
+/* Estilos de botones mejorados */
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* Efectos de texto */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Bordes redondeados */
+.border-rounded {
+    border-radius: 15px;
+}
+
+.img-rounded {
+    border-radius: 20px;
+}
+
+/* Estilos de títulos de sección */
+#uvp .h5 {
+    color: var(--nude-accent);
+    font-weight: 600;
+}
+
+/* Estilos del acordeón */
+.accordion-button {
+    background-color: var(--nude-medium);
+    color: var(--nude-text);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: var(--nude-accent);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(160, 141, 123, 0.25);
+}
+
+.accordion-item {
+    border-color: var(--nude-dark);
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.accordion-body {
+    background-color: bg-white;/* var(--nude-light);  */
+    color: var(--nude-text);
+}
+
+/* Estilos del modal */
+.modal-content {
+    background-color: var(--nude-light);
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom-color: var(--nude-dark);
+    background-color: var(--nude-medium);
+}
+
+.modal-footer {
+    border-top-color: var(--nude-dark);
+}
+
+/* Estilos del formulario */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid var(--nude-medium);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--nude-accent);
+    box-shadow: 0 0 0 0.25rem rgba(160, 141, 123, 0.25);
+}
+
+.form-label {
+    color: var(--nude-text);
+    font-weight: 600;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Animación de pulso para botones CTA */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(160, 141, 123, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(160, 141, 123, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(160, 141, 123, 0);
+    }
+}
+
+.btn-primary:hover {
+    animation: pulse 2s infinite;
+}
+
+/* Mejoras de accesibilidad */
+.btn:focus,
+.form-control:focus,
+.accordion-button:focus {
+    outline: 2px solid var(--nude-accent);
+    outline-offset: 2px;
+}
+
+/* Estilos responsive mejorados */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    #hero {
+        padding: 0 15px;
+    }
+    
+    #hero h2 {
+        letter-spacing: 2px;
+    }
+    
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .card-hover {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-padding {
+        padding: 40px 0;
+    }
+    
+    #hero h2 {
+        letter-spacing: 1px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+    
+    .btn-lg {
+        padding: 12px 25px;
+    }
+}
+
+/* Mejoras para dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+    .card-hover:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+        animation: none;
+    }
+}
+
+/* Estilos para impresión */
+@media print {
+    .btn,
+    .modal,
+    .accordion-button {
+        display: none !important;
+    }
+    
+    body {
+        color: #000 !important;
+        background: #fff !important;
+    }
+    
+    .section-padding {
+        padding: 20px 0;
+    }
+}
+
+/* Mejoras de rendimiento */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para estados de carga */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Estilos para validación de formularios */
+.was-validated .form-control:valid {
+    border-color: #28a745;
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+}
+
+/* Mejoras de contraste para accesibilidad */
+@media (prefers-contrast: high) {
+    :root {
+        --nude-accent: #6b5b4a;
+        --nude-text: #000;
+    }
+    
+    .btn-primary {
+        background-color: #000;
+        border-color: #000;
+        color: #fff;
+    }
+}
+
+/* Respeto por las preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .fade-in-up {
+        animation: none;
+    }
+}
+
