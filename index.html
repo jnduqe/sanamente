@@ -356,21 +356,19 @@
         }
     });
 })();
-*/
-(function() {
+*/(function() {
     'use strict';
     
     // Seleccionar el formulario de contacto
     const form = document.getElementById('contactForm');
     
     form.addEventListener('submit', function(event) {
-        // Prevenir el envío por defecto del formulario
+        // Prevenir el envío predeterminado del formulario
         event.preventDefault();
         event.stopPropagation();
         
-        // Verificar si el formulario es válido
+        // Comprobar si el formulario es válido
         if (form.checkValidity()) {
-            // Si es válido, capturar los datos y enviar el mensaje a WhatsApp
             
             // Capturar los valores de los campos
             const fullName = document.getElementById('fullName').value;
@@ -378,22 +376,24 @@
             const phoneNumber = document.getElementById('phoneNumber').value;
             const message = document.getElementById('message').value;
 
-            // Crear el mensaje de WhatsApp con formato
-            const whatsappMessage = `¡Hola SanaMente! 😊%0A` +
-                                    `Me gustaría agendar una sesión. Aquí están mis datos:%0A%0A` +
-                                    `*Nombre:* ${fullName}%0A` +
-                                    `*Correo:* ${emailAddress}%0A` +
-                                    `*Teléfono:* ${phoneNumber}%0A%0A` +
-                                    `*Mensaje:* ${message}`;
+            // Construir el mensaje sin codificar
+            const whatsappMessage = `¡Hola SanaMente! 😊
+Me gustaría agendar una sesión. Aquí están mis datos:
 
-            // Codificar el mensaje para la URL
+*Nombre:* ${fullName}
+*Correo:* ${emailAddress}
+*Teléfono:* ${phoneNumber}
+
+*Mensaje:* ${message}`;
+
+            // Codificar el mensaje completo para la URL
             const encodedMessage = encodeURIComponent(whatsappMessage);
             const whatsappUrl = `https://wa.me/573148763819?text=${encodedMessage}`;
             
             // Abrir el enlace de WhatsApp en una nueva pestaña
             window.open(whatsappUrl, '_blank');
 
-            // Limpiar el formulario y quitar los estilos de validación
+            // Limpiar el formulario y eliminar los estilos de validación
             form.reset();
             form.classList.remove('was-validated');
             
