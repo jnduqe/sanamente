@@ -24,6 +24,7 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -61,26 +62,38 @@
                         <h3 class="h5">🎓 Profesionales certificados</h3>
                         <p>Contamos con Registro ReTHUS y formación universitaria en psicología.</p>
 
- <form name="contact-form" method="post" class="form" action="https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec" >
-    <h1 class="title">Bienvenidos</h1>
-    <h3 class="subtitle">¡Vamos, crea una cuenta!</h3>
-    <div class="input-container ic1">
-        <input name="Nombre" id="firstname" class="input" type="text" placeholder=" "/>
-        <div class="cut"></div>
-        <label for="firstname" class="placeholder">Nombre</label>
-    </div>
-    <div class="input-container ic2">
-        <input name="Apellido" id="lastname" class="input" type="text" placeholder=" "/>
-        <div class="cut"></div>
-        <label for="lastname" class="placeholder">Apellido</label>
-    </div>
-    <div class="input-container ic2">
-        <input name="Email" id="email" class="input" type="text" placeholder=" "/>
-        <div class="cut cut-short"></div>
-        <label for="email" class="placeholder">Email</label>
-    </div>
-    <button type="submit" class="submit">submit</button>
-</form>
+
+
+                            <form name="contact-form" method="post" class="form"  >
+                                 
+                                
+                                    <div class="mb-3">
+                                        <label for="Nombre" class="form-label">Correo Electrónico *</label>
+                                        <input name="Nombre" id="Nombre" class="form-control" type="" placeholder="Nombre"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Apellido" class="form-label">Correo Electrónico *</label>
+                                        <input name="Apellido" id="Apellido" class="form-control" type="" placeholder="Apellido"/> 
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Email" class="form-label">Correo Electrónico *</label>
+                                        <input name="Email" id="Email" class="form-control" type="" placeholder="Email"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Mensaje" class="form-label">Correo Electrónico *</label>
+                                        <input name="Mensaje" id="Mensaje" class="form-control" type="" placeholder="mensaje"/>
+                                    </div>
+                                         <button type="submit" class="btn btn-primary">submit</button>
+                            </form>
+                            <script src="script.js"></script>
+
+
+
+
+
+
+
+
 
 
 
@@ -217,13 +230,16 @@
         <div class="container text-center">
             <h2 class="mb-4">Empieza hoy tu proceso de transformación</h2>
             <div class="d-grid gap-3 col-md-6 mx-auto mb-4">
-                <a href="https://wa.me/573148763819" class="btn btn-success btn-lg" target="_blank" rel="noopener noreferrer">📱 Escríbenos por WhatsApp</a>
-                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">
-                    📧 Déjanos tus datos y te contactamos
+            <!-- <a href="https://wa.me/573148763819" class="btn btn-success btn-lg" target="_blank" rel="noopener noreferrer">📱 Escríbenos por WhatsApp</a> -->
+                <button type="button" class="btn btn-success btn-lg btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">
+                     📱 Escríbenos por WhatsApp 
+                </button>
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal2">
+                     📧 Déjanos tus datos y te contactamos
                 </button>
             </div>
             
-            <!-- Contact Form Modal -->
+            <!-- Contact Form Modal 1 WHATSAAP-->
             <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -232,24 +248,24 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                         </div>
                         <div class="modal-body text-start">
-                            <form name="contact-form" method="post" id="contactForm" action="https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec" novalidate>
+                            <form name="contact-form" method="post" id="contactForm" action="https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec"  novalidate>
                                 <div class="mb-3">
                                     <label for="fullName" class="form-label">Nombre Completo *</label>
-                                    <input name="nombre" type="text" class="form-control" id="fullName" required>
+                                    <input name="Nombre" type="text" class="form-control" id="fullName" required>
                                     <div class="invalid-feedback">
                                         Por favor ingresa tu nombre completo.
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="emailAddress" class="form-label">Correo Electrónico *</label>
-                                    <input name="correo" type="email" class="form-control" id="emailAddress" required>
+                                    <input name="Apellido" type="email" class="form-control" id="emailAddress" required>
                                     <div class="invalid-feedback">
                                         Por favor ingresa un correo electrónico válido.
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="phoneNumber" class="form-label">Teléfono</label>
-                                    <input name="telefono" type="tel" class="form-control" id="phoneNumber">
+                                    <input name="Email" type="tel" class="form-control" id="phoneNumber">
                                 </div>
                                 <div class="mb-3">
                                     <label for="message" class="form-label">Mensaje</label>
@@ -261,14 +277,82 @@
                     </div>
                 </div>
             </div>
+<!-- Contact Form Modal 2 DEJANOS TUS DATOS-->
+            <div class="modal fade" id="contactModal2" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="contactModalLabel">Déjanos tus datos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body text-start">
+                          
+                             <form name="contact-form" method="post" class="form"  >
+                                 
+                                
+                                    <div class="mb-3">
+                                        <label for="Nombre" class="form-label">Correo Electrónico *</label>
+                                        <input name="Nombre" id="Nombre" class="form-control" type="" placeholder="Nombre"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Apellido" class="form-label">Correo Electrónico *</label>
+                                        <input name="Apellido" id="Apellido" class="form-control" type="" placeholder="Apellido"/> 
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Email" class="form-label">Correo Electrónico *</label>
+                                        <input name="Email" id="Email" class="form-control" type="" placeholder="Email"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Mensaje" class="form-label">Correo Electrónico *</label>
+                                        <input name="Mensaje" id="Mensaje" class="form-control" type="" placeholder="mensaje"/>
+                                    </div>
+                                         <button type="submit" class="btn btn-primary">submit</button>
+                            </form>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </section>
 
     <!-- Bootstrap JS desde CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
+    <!--script para que no se recargue la pagina con el envio de la informacion formulario deja tus datos-->
 
-    
+    <script>
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec';
+const form = document.forms['contact-form'];
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+
+    fetch(scriptUrl, {method: 'POST', body: new FormData(form)})
+            .then(response => Swal.fire({
+        title: "¡MUCHAS GRACIAS!",
+        text: "Formulario Envíado",
+        icon: "success"}))
+            .then( () => { window.location.reload() } )
+            .catch(error => console.error('Error', error.message))
+})
+
+
+
+
+    </script>
     <!-- JavaScript personalizado -->
     <script>
         // Validación del formulario de contacto
