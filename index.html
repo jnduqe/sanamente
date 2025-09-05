@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="html-lang">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SanaMente - Psicología Online y a Domicilio en Antioquia</title>
+    <title data-es="SanaMente - Psicología Online y a Domicilio en Antioquia" data-en="SanaMente - Online and Home Psychology in Antioquia">SanaMente - Psicología Online y a Domicilio en Antioquia</title>
     
     <!-- Meta tags para SEO -->
-    <meta name="description" content="Psicología online y a domicilio en Antioquia. Terapia cálida, cercana y adaptada a tu vida. Profesionales certificados ReTHUS.">
-    <meta name="keywords" content="psicología, terapia online, psicólogo Antioquia, terapia a domicilio, salud mental, bienestar emocional, psicologo rionegro">
+    <meta name="description" data-es="Psicología online y a domicilio en Antioquia. Terapia cálida, cercana y adaptada a tu vida. Profesionales certificados ReTHUS." data-en="Online and home psychology services in Antioquia. Warm, close therapy adapted to your life. ReTHUS certified professionals." content="Psicología online y a domicilio en Antioquia. Terapia cálida, cercana y adaptada a tu vida. Profesionales certificados ReTHUS.">
+    <meta name="keywords" data-es="psicología, terapia online, psicólogo Antioquia, terapia a domicilio, salud mental, bienestar emocional, psicologo rionegro" data-en="psychology, online therapy, psychologist Antioquia, home therapy, mental health, emotional wellness, psychologist rionegro" content="psicología, terapia online, psicólogo Antioquia, terapia a domicilio, salud mental, bienestar emocional, psicologo rionegro">
     <meta name="author" content="SanaMente">
     
     <!-- Open Graph tags para redes sociales -->
-    <meta property="og:title" content="SanaMente - Psicología Online y a Domicilio">
-    <meta property="og:description" content="Un espacio humano para redescubrir tu potencial. Terapia cálida, cercana y adaptada a tu vida.">
+    <meta property="og:title" data-es="SanaMente - Psicología Online y a Domicilio" data-en="SanaMente - Online and Home Psychology" content="SanaMente - Psicología Online y a Domicilio">
+    <meta property="og:description" data-es="Un espacio humano para redescubrir tu potencial. Terapia cálida, cercana y adaptada a tu vida." data-en="A human space to rediscover your potential. Warm, close therapy adapted to your life." content="Un espacio humano para redescubrir tu potencial. Terapia cálida, cercana y adaptada a tu vida.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./sanamante_hero.png">
     
@@ -24,21 +24,26 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button id="languageBtn" class="btn btn-outline-primary btn-sm">
+            <span id="currentLang">ES</span> | <span id="otherLang">EN</span>
+        </button>
+    </div>
 
     <!-- Hero Section -->
     <section id="hero" class="d-flex align-items-center justify-content-center text-center text-white position-relative" style="background-image: url('./sanamante_hero.png'); background-size: cover; background-position: center; height: 100vh;">
         <div class="hero-overlay position-absolute w-100 h-100"></div>
         <div class="container position-relative" style="z-index: 2;">
             <h2 class="display-6 text-shadow fade-in-up">BloomWise</h2>
-            <h1 class="display-4 text-shadow fade-in-up">Un espacio humano para redescubrir tu potencial</h1>
-            <p class="lead text-shadow fade-in-up">Psicología online y a domicilio en Antioquia. Terapia cálida, cercana y adaptada a tu vida.</p>
-            <a href="#contact" class="btn btn-light btn-lg mt-3 fade-in-up" role="button">Agenda tu primera sesión</a>
+            <h1 class="display-4 text-shadow fade-in-up" data-es="Un espacio humano para redescubrir tu potencial" data-en="A human space to rediscover your potential">Un espacio humano para redescubrir tu potencial</h1>
+            <p class="lead text-shadow fade-in-up" data-es="Psicología online y a domicilio en Antioquia. Terapia cálida, cercana y adaptada a tu vida." data-en="Online and home psychology in Antioquia. Warm, close therapy adapted to your life.">Psicología online y a domicilio en Antioquia. Terapia cálida, cercana y adaptada a tu vida.</p>
+            <a href="#contact" class="btn btn-light btn-lg mt-3 fade-in-up" role="button" data-es="Agenda tu primera sesión" data-en="Schedule your first session">Agenda tu primera sesión</a>
         </div>
-
-       
     </section>
 
     <!-- Unique Value Proposition (UVP) -->
@@ -47,65 +52,25 @@
             <div class="row text-center">
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5">🌐 Híbrida y flexible</h3>
-                        <p>No importa dónde estés, la terapia se adapta a tu vida: online o en casa.</p>
+                        <h3 class="h5" data-es="🌐 Híbrida y flexible" data-en="🌐 Hybrid and flexible">🌐 Híbrida y flexible</h3>
+                        <p data-es="No importa dónde estés, la terapia se adapta a tu vida: online o en casa." data-en="No matter where you are, therapy adapts to your life: online or at home.">No importa dónde estés, la terapia se adapta a tu vida: online o en casa.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5">💛 Cercanía y confianza</h3>
-                        <p>No somos una plataforma masiva: somos psicólogos locales que entienden tu realidad.</p>
+                        <h3 class="h5" data-es="💛 Cercanía y confianza" data-en="💛 Closeness and trust">💛 Cercanía y confianza</h3>
+                        <p data-es="No somos una plataforma masiva: somos psicólogos locales que entienden tu realidad." data-en="We're not a massive platform: we're local psychologists who understand your reality.">No somos una plataforma masiva: somos psicólogos locales que entienden tu realidad.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5">🎓 Profesionales certificados</h3>
-                        <p>Contamos con Registro ReTHUS y formación universitaria en psicología.</p>
-
-
-
-                            <form name="contact-form" method="post" class="form"  >
-                                 
-                                
-                                    <div class="mb-3">
-                                        <label for="Nombre" class="form-label">Correo Electrónico *</label>
-                                        <input name="Nombre" id="Nombre" class="form-control" type="" placeholder="Nombre"/>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="Apellido" class="form-label">Correo Electrónico *</label>
-                                        <input name="Apellido" id="Apellido" class="form-control" type="" placeholder="Apellido"/> 
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="Email" class="form-label">Correo Electrónico *</label>
-                                        <input name="Email" id="Email" class="form-control" type="" placeholder="Email"/>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="Mensaje" class="form-label">Correo Electrónico *</label>
-                                        <input name="Mensaje" id="Mensaje" class="form-control" type="" placeholder="mensaje"/>
-                                    </div>
-                                         <button type="submit" class="btn btn-primary">submit</button>
-                            </form>
-                            <script src="script.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <h3 class="h5" data-es="🎓 Profesionales certificados" data-en="🎓 Certified professionals">🎓 Profesionales certificados</h3>
+                        <p data-es="Contamos con Registro ReTHUS y formación universitaria en psicología." data-en="We have ReTHUS Registry and university training in psychology.">Contamos con Registro ReTHUS y formación universitaria en psicología.</p>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a href="#contact" class="btn btn-primary btn-lg" role="button">Habla con un psicólogo hoy</a>
+                <a href="#contact" class="btn btn-primary btn-lg" role="button" data-es="Habla con un psicólogo hoy" data-en="Talk to a psychologist today">Habla con un psicólogo hoy</a>
             </div>
         </div>
     </section>
@@ -118,8 +83,8 @@
                     <img src="./sanamante_about_us.png" class="img-fluid img-rounded shadow" alt="Equipo profesional de psicólogos SanaMente trabajando en un ambiente cálido y acogedor">
                 </div>
                 <div class="col-md-6">
-                    <h2 class="mb-4">Sobre Nosotros</h2>
-                    <p class="lead">Nuestro objetivo es ayudarte a redescubrir tu potencial y encontrar tus propias respuestas. Trabajamos desde un enfoque humanista, integrando otras corrientes cuando es necesario. Te acompañamos de manera auténtica, con calidez y respeto.</p>
+                    <h2 class="mb-4" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</h2>
+                    <p class="lead" data-es="Nuestro objetivo es ayudarte a redescubrir tu potencial y encontrar tus propias respuestas. Trabajamos desde un enfoque humanista, integrando otras corrientes cuando es necesario. Te acompañamos de manera auténtica, con calidez y respeto." data-en="Our goal is to help you rediscover your potential and find your own answers. We work from a humanistic approach, integrating other currents when necessary. We accompany you authentically, with warmth and respect.">Nuestro objetivo es ayudarte a redescubrir tu potencial y encontrar tus propias respuestas. Trabajamos desde un enfoque humanista, integrando otras corrientes cuando es necesario. Te acompañamos de manera auténtica, con calidez y respeto.</p>
                 </div>
             </div>
         </div>
@@ -128,27 +93,26 @@
     <!-- How It Works Section -->
     <section id="how-it-works" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Cómo Funciona</h2>
+            <h2 class="text-center mb-5" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</h2>
             <div class="row text-center">
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5">1. Cuéntanos sobre ti</h3>
-                        <p>Deja tus datos o escríbenos por WhatsApp.</p>
+                        <h3 class="h5" data-es="1. Cuéntanos sobre ti" data-en="1. Tell us about yourself">1. Cuéntanos sobre ti</h3>
+                        <p data-es="Deja tus datos o escríbenos por WhatsApp." data-en="Leave your information or write to us via WhatsApp.">Deja tus datos o escríbenos por WhatsApp.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5">2. Agenda tu sesión</h3>
-                        <p>Online o a domicilio.</p>
+                        <h3 class="h5" data-es="2. Agenda tu sesión" data-en="2. Schedule your session">2. Agenda tu sesión</h3>
+                        <p data-es="Online o a domicilio." data-en="Online or at home.">Online o a domicilio.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5">3. Vive tu proceso</h3>
-                        <p>Un espacio humano y transformador.</p>
+                        <h3 class="h5" data-es="3. Vive tu proceso" data-en="3. Live your process">3. Vive tu proceso</h3>
+                        <p data-es="Un espacio humano y transformador." data-en="A human and transformative space.">Un espacio humano y transformador.</p>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -156,12 +120,12 @@
      <!-- Testimonials / Trust Section -->
     <section id="testimonials" class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5">Confianza y Testimonios</h2>
+            <h2 class="text-center mb-5" data-es="Confianza y Testimonios" data-en="Trust and Testimonials">Confianza y Testimonios</h2>
             <div class="row text-center">
                 <div class="col-md-6 offset-md-3">
                     <div class="p-4 border-rounded bg-light shadow-sm">
-                        <p class="lead mb-3">✅ Psicólogos certificados en ReTHUS</p>
-                        <p class="lead">🏆 Más de X años de experiencia en acompañamiento humano</p>
+                        <p class="lead mb-3" data-es="✅ Psicólogos certificados en ReTHUS" data-en="✅ ReTHUS certified psychologists">✅ Psicólogos certificados en ReTHUS</p>
+                        <p class="lead" data-es="🏆 Más de X años de experiencia en acompañamiento humano" data-en="🏆 More than X years of experience in human accompaniment">🏆 Más de X años de experiencia en acompañamiento humano</p>
                     </div>
                 </div>
             </div>
@@ -171,52 +135,52 @@
     <!-- FAQ Section -->
     <section id="faq" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Preguntas Frecuentes</h2>
+            <h2 class="text-center mb-5" data-es="Preguntas Frecuentes" data-en="Frequently Asked Questions">Preguntas Frecuentes</h2>
             <div class="accordion" id="faqAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" data-es="¿Cómo sé si la terapia es para mí?" data-en="How do I know if therapy is for me?">
                             ¿Cómo sé si la terapia es para mí?
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
+                        <div class="accordion-body" data-es="La terapia es para cualquier persona que busque un espacio seguro para explorar sus pensamientos, emociones y comportamientos, y que desee crecer personal y emocionalmente. Si sientes que necesitas apoyo para manejar el estrés, la ansiedad, la depresión, problemas de relación o simplemente quieres mejorar tu bienestar general, la terapia puede ser una excelente opción." data-en="Therapy is for anyone seeking a safe space to explore their thoughts, emotions, and behaviors, and who wants to grow personally and emotionally. If you feel you need support managing stress, anxiety, depression, relationship issues, or simply want to improve your overall well-being, therapy can be an excellent option.">
                             La terapia es para cualquier persona que busque un espacio seguro para explorar sus pensamientos, emociones y comportamientos, y que desee crecer personal y emocionalmente. Si sientes que necesitas apoyo para manejar el estrés, la ansiedad, la depresión, problemas de relación o simplemente quieres mejorar tu bienestar general, la terapia puede ser una excelente opción.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-es="¿Qué pasa si no puedo asistir a la sesión?" data-en="What happens if I can't attend the session?">
                             ¿Qué pasa si no puedo asistir a la sesión?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
+                        <div class="accordion-body" data-es="Entendemos que pueden surgir imprevistos. Te pedimos que nos notifiques con al menos 24 horas de anticipación si necesitas cancelar o reprogramar tu sesión. De esta manera, podemos ofrecer tu espacio a otro paciente y reorganizar tu cita sin inconvenientes." data-en="We understand that unexpected situations can arise. We ask that you notify us at least 24 hours in advance if you need to cancel or reschedule your session. This way, we can offer your slot to another patient and reschedule your appointment without inconvenience.">
                             Entendemos que pueden surgir imprevistos. Te pedimos que nos notifiques con al menos 24 horas de anticipación si necesitas cancelar o reprogramar tu sesión. De esta manera, podemos ofrecer tu espacio a otro paciente y reorganizar tu cita sin inconvenientes.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-es="¿Tienen costo adicional las visitas a domicilio?" data-en="Do home visits have additional cost?">
                             ¿Tienen costo adicional las visitas a domicilio?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
+                        <div class="accordion-body" data-es="Sí, las visitas a domicilio tienen un costo adicional que varía según la ubicación dentro de Antioquia. Te invitamos a contactarnos para obtener un presupuesto preciso y personalizado para tu zona." data-en="Yes, home visits have an additional cost that varies according to the location within Antioquia. We invite you to contact us to get an accurate and personalized quote for your area.">
                             Sí, las visitas a domicilio tienen un costo adicional que varía según la ubicación dentro de Antioquia. Te invitamos a contactarnos para obtener un presupuesto preciso y personalizado para tu zona.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" data-es="¿Atienden solo en Antioquia?" data-en="Do you only serve in Antioquia?">
                             ¿Atienden solo en Antioquia?
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
+                        <div class="accordion-body" data-es="Actualmente, nuestros servicios a domicilio están disponibles exclusivamente en Antioquia. Sin embargo, ofrecemos terapia online a nivel nacional e internacional, permitiéndote acceder a nuestros profesionales desde cualquier lugar con conexión a internet." data-en="Currently, our home services are available exclusively in Antioquia. However, we offer online therapy nationally and internationally, allowing you to access our professionals from anywhere with an internet connection.">
                             Actualmente, nuestros servicios a domicilio están disponibles exclusivamente en Antioquia. Sin embargo, ofrecemos terapia online a nivel nacional e internacional, permitiéndote acceder a nuestros profesionales desde cualquier lugar con conexión a internet.
                         </div>
                     </div>
@@ -228,13 +192,12 @@
     <!-- Final CTA / Contact Section -->
     <section id="contact" class="section-padding">
         <div class="container text-center">
-            <h2 class="mb-4">Empieza hoy tu proceso de transformación</h2>
+            <h2 class="mb-4" data-es="Empieza hoy tu proceso de transformación" data-en="Start your transformation process today">Empieza hoy tu proceso de transformación</h2>
             <div class="d-grid gap-3 col-md-6 mx-auto mb-4">
-            <!-- <a href="https://wa.me/573148763819" class="btn btn-success btn-lg" target="_blank" rel="noopener noreferrer">📱 Escríbenos por WhatsApp</a> -->
-                <button type="button" class="btn btn-success btn-lg btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">
+                <button type="button" class="btn btn-success btn-lg btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal" data-es="📱 Escríbenos por WhatsApp" data-en="📱 Write to us on WhatsApp">
                      📱 Escríbenos por WhatsApp 
                 </button>
-                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal2">
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal2" data-es="📧 Déjanos tus datos y te contactamos" data-en="📧 Leave your information and we'll contact you">
                      📧 Déjanos tus datos y te contactamos
                 </button>
             </div>
@@ -244,285 +207,165 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="contactModalLabel">Déjanos tus datos</h5>
+                            <h5 class="modal-title" id="contactModalLabel" data-es="Déjanos tus datos" data-en="Leave your information">Déjanos tus datos</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                         </div>
                         <div class="modal-body text-start">
                             <form name="contact-form" method="post" id="contactForm" action="https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec"  novalidate>
                                 <div class="mb-3">
-                                    <label for="fullName" class="form-label">Nombre Completo *</label>
+                                    <label for="fullName" class="form-label" data-es="Nombre Completo *" data-en="Full Name *">Nombre Completo *</label>
                                     <input name="Nombre" type="text" class="form-control" id="fullName" required>
-                                    <div class="invalid-feedback">
+                                    <div class="invalid-feedback" data-es="Por favor ingresa tu nombre completo." data-en="Please enter your full name.">
                                         Por favor ingresa tu nombre completo.
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="emailAddress" class="form-label">Correo Electrónico *</label>
+                                    <label for="emailAddress" class="form-label" data-es="Correo Electrónico *" data-en="Email Address *">Correo Electrónico *</label>
                                     <input name="Apellido" type="email" class="form-control" id="emailAddress" required>
-                                    <div class="invalid-feedback">
+                                    <div class="invalid-feedback" data-es="Por favor ingresa un correo electrónico válido." data-en="Please enter a valid email address.">
                                         Por favor ingresa un correo electrónico válido.
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="phoneNumber" class="form-label">Teléfono</label>
+                                    <label for="phoneNumber" class="form-label" data-es="Teléfono" data-en="Phone">Teléfono</label>
                                     <input name="Email" type="tel" class="form-control" id="phoneNumber">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="message" class="form-label">Mensaje</label>
-                                    <textarea name="mensaje" class="form-control" id="message" rows="3" placeholder="Cuéntanos brevemente cómo podemos ayudarte..."></textarea>
+                                    <label for="message" class="form-label" data-es="Mensaje" data-en="Message">Mensaje</label>
+                                    <textarea name="mensaje" class="form-control" id="message" rows="3" data-es="Cuéntanos brevemente cómo podemos ayudarte..." data-en="Tell us briefly how we can help you..." placeholder="Cuéntanos brevemente cómo podemos ayudarte..."></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="submit" class="btn btn-primary" data-es="Enviar" data-en="Send">Enviar</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-<!-- Contact Form Modal 2 DEJANOS TUS DATOS-->
-            <div class="modal fade" id="contactModal2" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+
+            <!-- Contact Form Modal 2 DEJANOS TUS DATOS-->
+            <div class="modal fade" id="contactModal2" tabindex="-1" aria-labelledby="contactModalLabel2" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="contactModalLabel">Déjanos tus datos</h5>
+                            <h5 class="modal-title" id="contactModalLabel2" data-es="Déjanos tus datos" data-en="Leave your information">Déjanos tus datos</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                         </div>
                         <div class="modal-body text-start">
-                          
-                             <form name="contact-form" method="post" class="form"  >
-                                 
-                                
-                                    <div class="mb-3">
-                                        <label for="Nombre" class="form-label">Correo Electrónico *</label>
-                                        <input name="Nombre" id="Nombre" class="form-control" type="" placeholder="Nombre"/>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="Apellido" class="form-label">Correo Electrónico *</label>
-                                        <input name="Apellido" id="Apellido" class="form-control" type="" placeholder="Apellido"/> 
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="Email" class="form-label">Correo Electrónico *</label>
-                                        <input name="Email" id="Email" class="form-control" type="" placeholder="Email"/>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="Mensaje" class="form-label">Correo Electrónico *</label>
-                                        <input name="Mensaje" id="Mensaje" class="form-control" type="" placeholder="mensaje"/>
-                                    </div>
-                                         <button type="submit" class="btn btn-primary">submit</button>
+                             <form name="contact-form" method="post" class="form" id="formu2" >
+                                <div class="mb-3">
+                                    <label for="Nombre2" class="form-label" data-es="Nombre *" data-en="Name *">Nombre *</label>
+                                    <input name="Nombre" id="Nombre2" class="form-control" type="text" data-es="Nombre" data-en="Name" placeholder="Nombre"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Apellido2" class="form-label" data-es="Apellido *" data-en="Last Name *">Apellido *</label>
+                                    <input name="Apellido" id="Apellido2" class="form-control" type="text" data-es="Apellido" data-en="Last Name" placeholder="Apellido"/> 
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Email2" class="form-label" data-es="Correo Electrónico *" data-en="Email Address *">Correo Electrónico *</label>
+                                    <input name="Email" id="Email2" class="form-control" type="email" placeholder="Email"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Mensaje2" class="form-label" data-es="Mensaje*" data-en="Message*">Mensaje*</label>
+                                    <input name="Mensaje" id="Mensaje2" class="form-control" type="text" data-es="mensaje" data-en="message" placeholder="mensaje"/>
+                                </div>
+                                <button type="submit" class="btn btn-primary" data-es="Enviar" data-en="Submit">Enviar</button>
                             </form>
-                            
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </section>
 
     <!-- Bootstrap JS desde CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
+    <!-- Language functionality -->
+    <script src="./language.js"></script>
+    
     <!--script para que no se recargue la pagina con el envio de la informacion formulario deja tus datos-->
-
     <script>
         const scriptUrl = 'https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec';
-const form = document.forms['contact-form'];
+        const form = document.forms['contact-form'];
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
+        form.addEventListener('submit', e => {
+            e.preventDefault()
 
-    fetch(scriptUrl, {method: 'POST', body: new FormData(form)})
-            .then(response => Swal.fire({
-        title: "¡MUCHAS GRACIAS!",
-        text: "Formulario Envíado",
-        icon: "success"}))
-            .then( () => { window.location.reload() } )
-            .catch(error => console.error('Error', error.message))
-})
-
-
-
-
+            fetch(scriptUrl, {method: 'POST', body: new FormData(form)})
+                    .then(response => Swal.fire({
+                title: "¡MUCHAS GRACIAS!",
+                text: "Formulario Enviado",
+                icon: "success"}))
+                    .then( () => { window.location.reload() } )
+                    .catch(error => console.error('Error', error.message))
+        })
     </script>
+    
     <!-- JavaScript personalizado -->
     <script>
-        // Validación del formulario de contacto
-      /* codigo original validacion del formmulario
-      
-      (function() {
+        (function() {
             'use strict';
             
+            // Seleccionar el formulario de contacto
             const form = document.getElementById('contactForm');
             
             form.addEventListener('submit', function(event) {
+                // Prevenir el envío predeterminado del formulario
                 event.preventDefault();
                 event.stopPropagation();
                 
+                // Comprobar si el formulario es válido
                 if (form.checkValidity()) {
-                    // Aquí se puede integrar con un servicio de email o backend
-                    alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-                    form.reset();
-                    form.classList.remove('was-validated');
                     
-                    // Cerrar el modal
-                    const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-                    modal.hide();
-                } else {
-                    form.classList.add('was-validated');
-                }
-            });
-        })();
-        */
+                    // Capturar los valores de los campos
+                    const fullName = document.getElementById('fullName').value;
+                    const emailAddress = document.getElementById('emailAddress').value;
+                    const phoneNumber = document.getElementById('phoneNumber').value;
+                    const message = document.getElementById('message').value;
 
-
-      /*version 2 donde solo capturo los datos
-      
-      (function() {
-            'use strict';
-    
-                const form = document.getElementById('contactForm');
-                
-                form.addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    event.stopPropagation();
+                    // Get current language
+                    const currentLang = localStorage.getItem('preferredLanguage') || 'es';
                     
-                    if (form.checkValidity()) {
-                        // 1. Capturar los valores de los campos
-                        const fullName = document.getElementById('fullName').value;
-                        const emailAddress = document.getElementById('emailAddress').value;
-                        const phoneNumber = document.getElementById('phoneNumber').value;
-                        const message = document.getElementById('message').value;
-
-                        // 2. Crear el mensaje con los datos capturados
-                        const alertMessage = `¡Gracias por tu mensaje, ${fullName}! 🎉\n\n` +
-                                            `Hemos recibido tus datos y te contactaremos pronto.\n\n` +
-                                            `Resumen:\n` +
-                                            `Correo: ${emailAddress}\n` +
-                                            `Teléfono: ${phoneNumber}\n` +
-                                            `Mensaje: ${message}`;
-                        
-                        // 3. Mostrar la alerta con los datos
-                        alert(alertMessage);
-                        
-                        // Resto de la lógica (limpiar el formulario y cerrar el modal)
-                        form.reset();
-                        form.classList.remove('was-validated');
-                        
-                        const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-                        modal.hide();
-                    } else {
-                        form.classList.add('was-validated');
-                    }
-                });
-        })();
-
-        final version 2 */
-
-     /* 
-     Version 2 enviar desde el navegador
-     
-     (function() {
-    'use strict';
-    
-    const form = document.getElementById('contactForm');
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        
-        if (form.checkValidity()) {
-            // 1. Capturar los valores de los campos
-            const fullName = document.getElementById('fullName').value;
-            const emailAddress = document.getElementById('emailAddress').value;
-            const phoneNumber = document.getElementById('phoneNumber').value;
-            const message = document.getElementById('message').value;
-
-            // 2. Crear el mensaje de WhatsApp
-            const whatsappMessage = `¡Hola SanaMente! 😊%0A` +
-                                    `Me gustaría agendar una sesión. Aquí están mis datos:%0A%0A` +
-                                    `*Nombre:* ${fullName}%0A` +
-                                    `*Correo:* ${emailAddress}%0A` +
-                                    `*Teléfono:* ${phoneNumber}%0A%0A` +
-                                    `*Mensaje:* ${message}`;
-
-            // 3. Codificar la URL del mensaje
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-            const whatsappURL = `https://wa.me/573148763819?text=${encodedMessage}`;
-
-            // 4. Redirigir al usuario
-            window.location.href = whatsappURL;
-
-            // Opcional: Limpiar el formulario y cerrar el modal después de la redirección
-            form.reset();
-            form.classList.remove('was-validated');
-            const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-            modal.hide();
-
-        } else {
-            form.classList.add('was-validated');
-        }
-    });
-})();
-*/(function() {
-    'use strict';
-    
-    // Seleccionar el formulario de contacto
-    const form = document.getElementById('contactForm');
-    
-    form.addEventListener('submit', function(event) {
-        // Prevenir el envío predeterminado del formulario
-        event.preventDefault();
-        event.stopPropagation();
-        
-        // Comprobar si el formulario es válido
-        if (form.checkValidity()) {
-            
-            // Capturar los valores de los campos
-            const fullName = document.getElementById('fullName').value;
-            const emailAddress = document.getElementById('emailAddress').value;
-            const phoneNumber = document.getElementById('phoneNumber').value;
-            const message = document.getElementById('message').value;
-
-            // Construir el mensaje sin codificar
-            const whatsappMessage = `¡Hola SanaMente! 
+                    // Construir el mensaje sin codificar
+                    const whatsappMessage = currentLang === 'es' ? 
+                        `¡Hola SanaMente! 
 Me gustaría agendar una sesión. Aquí están mis datos:
 
 *Nombre:* ${fullName}
 *Correo:* ${emailAddress}
 *Teléfono:* ${phoneNumber}
 
-*Mensaje:* ${message}`;
+*Mensaje:* ${message}` :
+                        `Hello SanaMente! 
+I would like to schedule a session. Here is my information:
 
-            // Codificar el mensaje completo para la URL
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-            const whatsappUrl = `https://wa.me/573148763819?text=${encodedMessage}`;
-            
-            // Abrir el enlace de WhatsApp en una nueva pestaña
-            window.open(whatsappUrl, '_blank');
+*Name:* ${fullName}
+*Email:* ${emailAddress}
+*Phone:* ${phoneNumber}
 
-            // Limpiar el formulario y eliminar los estilos de validación
-            form.reset();
-            form.classList.remove('was-validated');
-            
-            // Cerrar el modal
-            const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-            modal.hide();
+*Message:* ${message}`;
 
-        } else {
-            // Si no es válido, mostrar los mensajes de error
-            form.classList.add('was-validated');
-        }
-    });
-})();
+                    // Codificar el mensaje completo para la URL
+                    const encodedMessage = encodeURIComponent(whatsappMessage);
+                    const whatsappUrl = `https://wa.me/573148763819?text=${encodedMessage}`;
+                    
+                    // Abrir el enlace de WhatsApp en una nueva pestaña
+                    window.open(whatsappUrl, '_blank');
+
+                    // Limpiar el formulario y eliminar los estilos de validación
+                    form.reset();
+                    form.classList.remove('was-validated');
+                    
+                    // Cerrar el modal
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+                    modal.hide();
+
+                } else {
+                    // Si no es válido, mostrar los mensajes de error
+                    form.classList.add('was-validated');
+                }
+            });
+        })();
+        
         // Smooth scrolling para los enlaces internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -558,4 +401,3 @@ Me gustaría agendar una sesión. Aquí están mis datos:
     </script>
 </body>
 </html>
-

@@ -16,6 +16,84 @@ body {
     --nude-accent-hover: #8a7a6b; /* Hover state */
 }
 
+/* Language Toggle Styles */
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.language-toggle:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+#languageBtn {
+    border: 2px solid var(--nude-accent);
+    background: transparent;
+    color: var(--nude-accent);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+#languageBtn:hover,
+#languageBtn:focus {
+    background-color: var(--nude-accent);
+    color: white;
+    border-color: var(--nude-accent);
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+#currentLang {
+    font-weight: 700;
+    opacity: 1;
+}
+
+#otherLang {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+#languageBtn:hover #otherLang {
+    opacity: 1;
+}
+
+/* Smooth transition for language changes */
+[data-es], [data-en] {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.language-changing [data-es],
+.language-changing [data-en] {
+    opacity: 0.7;
+}
+
+/* Responsive language toggle */
+@media (max-width: 768px) {
+    .language-toggle {
+        top: 15px;
+        right: 15px;
+    }
+    
+    #languageBtn {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}
+
 /* Estilos de fondo */
 .bg-light {
     background-color: var(--nude-light) !important;
@@ -239,6 +317,26 @@ body {
     animation: pulse 2s infinite;
 }
 
+/* Language transition animation */
+@keyframes languageSwitch {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.language-switching {
+    animation: languageSwitch 0.5s ease-in-out;
+}
+
 /* Mejoras de accesibilidad */
 .btn:focus,
 .form-control:focus,
@@ -299,13 +397,18 @@ body {
         transform: none;
         animation: none;
     }
+    
+    .language-toggle:hover {
+        transform: none;
+    }
 }
 
 /* Estilos para impresión */
 @media print {
     .btn,
     .modal,
-    .accordion-button {
+    .accordion-button,
+    .language-toggle {
         display: none !important;
     }
     
@@ -356,6 +459,11 @@ img {
         border-color: #000;
         color: #fff;
     }
+    
+    #languageBtn {
+        border-color: #000;
+        color: #000;
+    }
 }
 
 /* Respeto por las preferencias de movimiento reducido */
@@ -368,8 +476,14 @@ img {
         transition-duration: 0.01ms !important;
     }
     
-    .fade-in-up {
+    .fade-in-up,
+    .language-switching {
         animation: none;
     }
+    
+    .language-toggle,
+    .btn,
+    .card-hover {
+        transition: none;
+    }
 }
-
