@@ -99,12 +99,44 @@
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
                         <h3 class="h5" data-es="1. Cuéntanos sobre ti" data-en="1. Tell us about yourself">1. Cuéntanos sobre ti</h3>
                         <p data-es="Deja tus datos o escríbenos por WhatsApp." data-en="Leave your information or write to us via WhatsApp.">Deja tus datos o escríbenos por WhatsApp.</p>
+             <!--Boton agenda tu cita por whatsapp-->           
+                <button type="button" class="btn btn-success btn-lg btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal" data-es="📱 Escríbenos por WhatsApp" data-en="📱 Write to us on WhatsApp">
+                     📱 Escríbenos por WhatsApp 
+                </button>
+            <!-- Fin boton agenda tu cita por whatsaap-->
+
+
+
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
                         <h3 class="h5" data-es="2. Agenda tu sesión" data-en="2. Schedule your session">2. Agenda tu sesión</h3>
                         <p data-es="Online o a domicilio." data-en="Online or at home.">Online o a domicilio.</p>
+
+
+
+            <!-- Google Calendar Appointment Scheduling begin -->
+                                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                                <script>
+                                (function() {
+                                var target = document.currentScript;
+                                window.addEventListener('load', function() {
+                                    calendar.schedulingButton.load({
+                                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRFuDH3wOrsfQeoNFwZm4NMIknO03XumlkeC2BWE0_0XKHtc_cooCQT64nH6E0NhDuDQZrnsa?gv=true',
+                                    color: '#039BE5',
+                                    label: 'Reservar una cita',
+                                    target,
+                                    });
+                                });
+                                })();
+                                </script>
+            <!-- end Google Calendar Appointment Scheduling -->
+
+
+
+
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -194,11 +226,12 @@
         <div class="container text-center">
             <h2 class="mb-4" data-es="Empieza hoy tu proceso de transformación" data-en="Start your transformation process today">Empieza hoy tu proceso de transformación</h2>
             <div class="d-grid gap-3 col-md-6 mx-auto mb-4">
-                <button type="button" class="btn btn-success btn-lg btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal" data-es="📱 Escríbenos por WhatsApp" data-en="📱 Write to us on WhatsApp">
-                     📱 Escríbenos por WhatsApp 
-                </button>
+                
                 <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal2" data-es="📧 Déjanos tus datos y te contactamos" data-en="📧 Leave your information and we'll contact you">
                      📧 Déjanos tus datos y te contactamos
+                </button>
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal3" data-es="✨ Empieza tu camino de sanación — reclama tu valoracion GRATIS" data-en="✨ Start your healing journey — claim your FREE assessment">
+                     ✨ Empieza tu camino de sanación — reclama tu valoracion GRATIS
                 </button>
             </div>
             
@@ -273,6 +306,38 @@
                     </div>
                 </div>
             </div>
+
+            
+            <!-- Contact Form Modal 3 AGENDA TU CITA-->
+            <div class="modal fade" id="contactModal3" tabindex="-1" aria-labelledby="contactModalLabel3" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="contactModalLabel2" data-es="Déjanos tus datos" data-en="Leave your information">Déjanos tus datos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body text-start">
+                           
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRFuDH3wOrsfQeoNFwZm4NMIknO03XumlkeC2BWE0_0XKHtc_cooCQT64nH6E0NhDuDQZrnsa?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
         </div>
     </section>
 
