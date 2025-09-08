@@ -450,6 +450,20 @@ body {
     border-top-color: var(--nude-dark);
 }
 
+/* Modal 3 específico - fondo blanco */
+#contactModal3 .modal-content {
+    background-color: white;
+}
+
+#contactModal3 .modal-header {
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#contactModal3 .modal-body {
+    background-color: white;
+}
+
 /* Estilos del formulario */
 .form-control {
     border-radius: 10px;
