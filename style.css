@@ -8,12 +8,14 @@ body {
 
 /* Variables CSS para colores nude */
 :root {
-    --nude-light: #f5f5dc; /* Beige claro */
-    --nude-medium: #e0d8c7; /* Beige medio */
-    --nude-dark: #d4c9b6; /* Beige oscuro */
-    --nude-text: #5c5c5c; /* Gris para texto */
-    --nude-accent: #a08d7b; /* Tono más oscuro para acentos */
-    --nude-accent-hover: #8a7a6b; /* Hover state */
+    --nude-light: #f5f5dc;
+    --nude-medium: #e0d8c7;
+    --nude-dark: #d4c9b6;
+    --nude-text: #5c5c5c;
+    --nude-accent: #a08d7b;
+    --nude-accent-hover: #8a7a6b;
+    --success-green: #25d366;
+    --success-green-hover: #20b05a;
 }
 
 /* Language Toggle Styles */
@@ -71,6 +73,200 @@ body {
     opacity: 1;
 }
 
+/* Estilos mejorados para botones principales - CTA BUTTONS */
+.cta-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    width: 100%;
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.cta-whatsapp {
+    background: linear-gradient(135deg, var(--success-green), #128c7e);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.cta-whatsapp:hover {
+    background: linear-gradient(135deg, var(--success-green-hover), #0d7377);
+    color: white;
+}
+
+.cta-schedule {
+    background: linear-gradient(135deg, var(--nude-accent), #b89d8a);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.cta-schedule:hover {
+    background: linear-gradient(135deg, var(--nude-accent-hover), #a08d7b);
+    color: white;
+}
+
+.cta-contact {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.cta-contact:hover {
+    background: linear-gradient(135deg, #545b62, #495057);
+    color: white;
+}
+
+.cta-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.cta-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    color: white;
+}
+
+.cta-icon {
+    font-size: 1.3rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Estilos para testimonios */
+.testimonials-section {
+    background: linear-gradient(135deg, var(--nude-light), #f8f9fa);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="%23a08d7b" opacity="0.05"/><circle cx="75" cy="75" r="0.5" fill="%23a08d7b" opacity="0.05"/><circle cx="50" cy="10" r="0.3" fill="%23a08d7b" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+.testimonial-carousel {
+    position: relative;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 40px 35px;
+    margin: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(160, 141, 123, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    font-size: 4rem;
+    color: var(--nude-accent);
+    font-family: Georgia, serif;
+    opacity: 0.3;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--nude-text);
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--nude-accent), var(--nude-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.author-info h5 {
+    margin: 0;
+    color: var(--nude-accent);
+    font-weight: 600;
+}
+
+.author-info .text-muted {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.stars {
+    color: #ffc107;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
 /* Smooth transition for language changes */
 [data-es], [data-en] {
     transition: opacity 0.3s ease-in-out;
@@ -81,25 +277,12 @@ body {
     opacity: 0.7;
 }
 
-/* Responsive language toggle */
-@media (max-width: 768px) {
-    .language-toggle {
-        top: 15px;
-        right: 15px;
-    }
-    
-    #languageBtn {
-        font-size: 0.75rem;
-        padding: 6px 12px;
-    }
-}
-
 /* Estilos de fondo */
 .bg-light {
     background-color: var(--nude-light) !important;
 }
 
-/* Estilos de botones */
+/* Estilos de botones generales */
 .btn-primary {
     background-color: var(--nude-accent);
     border-color: var(--nude-accent);
@@ -247,7 +430,7 @@ body {
 }
 
 .accordion-body {
-    background-color: bg-white;/* var(--nude-light);  */
+    background-color: white;
     color: var(--nude-text);
 }
 
@@ -367,6 +550,30 @@ body {
     .card-hover {
         margin-bottom: 1rem;
     }
+    
+    .cta-button-group {
+        gap: 15px;
+    }
+    
+    .cta-button {
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
+    
+    .testimonial-card {
+        margin: 10px;
+        padding: 30px 25px;
+    }
+
+    .language-toggle {
+        top: 15px;
+        right: 15px;
+    }
+    
+    #languageBtn {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -384,6 +591,11 @@ body {
     
     .btn-lg {
         padding: 12px 25px;
+    }
+    
+    .cta-button {
+        font-size: 0.95rem;
+        padding: 14px 20px;
     }
 }
 

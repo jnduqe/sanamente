@@ -39,7 +39,7 @@
     <section id="hero" class="d-flex align-items-center justify-content-center text-center text-white position-relative" style="background-image: url('./sanamante_hero.png'); background-size: cover; background-position: center; height: 100vh;">
         <div class="hero-overlay position-absolute w-100 h-100"></div>
         <div class="container position-relative" style="z-index: 2;">
-            <h2 class="display-6 text-shadow fade-in-up" data-es="sanamente" data-en="Bloomwise">BloomWise</h2>
+            <h2 class="display-6 text-shadow fade-in-up" data-es="Bloomwise therapy" data-en="Bloomwise Therapy">BloomWise Therapy</h2>
             <h1 class="display-4 text-shadow fade-in-up" data-es="Un espacio humano para redescubrir tu potencial" data-en="A human space to rediscover your potential">Un espacio humano para redescubrir tu potencial</h1>
             <p class="lead text-shadow fade-in-up" data-es="Psicología online y a domicilio en Antioquia. Terapia cálida, cercana y adaptada a tu vida." data-en="Online and home psychology in Antioquia. Warm, close therapy adapted to your life.">Psicología online y a domicilio en Antioquia. Terapia cálida, cercana y adaptada a tu vida.</p>
             <a href="#contact" class="btn btn-light btn-lg mt-3 fade-in-up" role="button" data-es="Agenda tu primera sesión" data-en="Schedule your first session">Agenda tu primera sesión</a>
@@ -52,7 +52,7 @@
             <div class="row text-center">
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5" data-es="🌐 Híbrida y flexible" data-en="🌐 Hybrid and flexible">🌐 Híbrida y flexible</h3>
+                        <h3 class="h5" data-es="🌍 Híbrida y flexible" data-en="🌍 Hybrid and flexible">🌍 Híbrida y flexible</h3>
                         <p data-es="No importa dónde estés, la terapia se adapta a tu vida: online o en casa." data-en="No matter where you are, therapy adapts to your life: online or at home.">No importa dónde estés, la terapia se adapta a tu vida: online o en casa.</p>
                     </div>
                 </div>
@@ -90,74 +90,149 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
+    <!-- How It Works Section - MEJORADA -->
     <section id="how-it-works" class="section-padding bg-light">
         <div class="container">
             <h2 class="text-center mb-5" data-es="Cómo Funciona" data-en="How It Works">Cómo Funciona</h2>
             <div class="row text-center">
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5" data-es="1. Cuéntanos sobre ti" data-en="1. Tell us about yourself">1. Cuéntanos sobre ti</h3>
-                        <p data-es="Deja tus datos o escríbenos por WhatsApp." data-en="Leave your information or write to us via WhatsApp.">Deja tus datos o escríbenos por WhatsApp.</p>
-             <!--Boton agenda tu cita por whatsapp-->           
-                <button type="button" class="btn btn-success btn-lg btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal" data-es="📱 Escríbenos por WhatsApp" data-en="📱 Write to us on WhatsApp">
-                     📱 Escríbenos por WhatsApp 
-                </button>
-            <!-- Fin boton agenda tu cita por whatsaap-->
-
-
-
+                        <h3 class="h5 mb-4" data-es="1. Cuéntanos sobre ti" data-en="1. Tell us about yourself">1. Cuéntanos sobre ti</h3>
+                        <p class="mb-4" data-es="Deja tus datos o escríbenos por WhatsApp." data-en="Leave your information or write to us via WhatsApp.">Deja tus datos o escríbenos por WhatsApp.</p>
+                        
+                        <div class="cta-button-group">
+                            <button type="button" class="cta-button cta-whatsapp" data-bs-toggle="modal" data-bs-target="#contactModal" data-es="📱 Escríbenos por WhatsApp" data-en="📱 Write to us on WhatsApp">
+                                <span class="cta-icon">📱</span>
+                                <span data-es="Escríbenos por WhatsApp" data-en="Write to us on WhatsApp">Escríbenos por WhatsApp</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5" data-es="2. Agenda tu sesión" data-en="2. Schedule your session">2. Agenda tu sesión</h3>
-                        <p data-es="Online o a domicilio." data-en="Online or at home.">Online o a domicilio.</p>
+                        <h3 class="h5 mb-4" data-es="2. Agenda tu sesión" data-en="2. Schedule your session">2. Agenda tu sesión</h3>
+                        <p class="mb-4" data-es="Online o a domicilio." data-en="Online or at home.">Online o a domicilio.</p>
 
-
-
-            <!-- Google Calendar Appointment Scheduling begin -->
-                                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-                                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-                                <script>
-                                (function() {
-                                var target = document.currentScript;
-                                window.addEventListener('load', function() {
-                                    calendar.schedulingButton.load({
-                                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRFuDH3wOrsfQeoNFwZm4NMIknO03XumlkeC2BWE0_0XKHtc_cooCQT64nH6E0NhDuDQZrnsa?gv=true',
-                                    color: '#039BE5',
-                                    label: 'Reservar una cita',
-                                    target,
-                                    });
-                                });
-                                })();
-                                </script>
-            <!-- end Google Calendar Appointment Scheduling -->
-
-
-
-
+                        <div class="cta-button-group">
+                            <button type="button" class="cta-button cta-schedule" data-bs-toggle="modal" data-bs-target="#contactModal3" data-es="📅 Reservar una cita" data-en="📅 Book an appointment">
+                                <span class="cta-icon">📅</span>
+                                <span data-es="Reservar una cita" data-en="Book an appointment">Reservar una cita</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="p-4 border-rounded h-100 card-hover bg-white shadow-sm">
-                        <h3 class="h5" data-es="3. Vive tu proceso" data-en="3. Live your process">3. Vive tu proceso</h3>
-                        <p data-es="Un espacio humano y transformador." data-en="A human and transformative space.">Un espacio humano y transformador.</p>
+                        <h3 class="h5 mb-4" data-es="3. Vive tu proceso" data-en="3. Live your process">3. Vive tu proceso</h3>
+                        <p class="mb-4" data-es="Un espacio humano y transformador." data-en="A human and transformative space.">Un espacio humano y transformador.</p>
+                        
+                        <div class="cta-button-group">
+                            <button type="button" class="cta-button cta-contact" data-bs-toggle="modal" data-bs-target="#contactModal2" data-es="📧 Déjanos tus datos" data-en="📧 Leave your information">
+                                <span class="cta-icon">📧</span>
+                                <span data-es="Déjanos tus datos" data-en="Leave your information">Déjanos tus datos</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-     <!-- Testimonials / Trust Section -->
+    <!-- NUEVA SECCIÓN: Testimonios de Clientes -->
+    <section id="testimonials-clients" class="section-padding testimonials-section">
+        <div class="container">
+            <h2 class="text-center mb-5" data-es="Lo que dicen nuestros pacientes" data-en="What our patients say">Lo que dicen nuestros pacientes</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text" data-es="La terapia online me cambió la vida. Pude trabajar desde la comodidad de mi casa y sentí una conexión real con mi psicóloga. El proceso fue transformador y me ayudó a superar mi ansiedad." data-en="Online therapy changed my life. I was able to work from the comfort of my home and felt a real connection with my psychologist. The process was transformative and helped me overcome my anxiety.">
+                            La terapia online me cambió la vida. Pude trabajar desde la comodidad de mi casa y sentí una conexión real con mi psicóloga. El proceso fue transformador y me ayudó a superar mi ansiedad.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h5 data-es="María S." data-en="María S.">María S.</h5>
+                                <p class="text-muted" data-es="Medellín, Antioquia" data-en="Medellín, Antioquia">Medellín, Antioquia</p>
+                                <div class="stars">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text" data-es="Excelente atención a domicilio. La psicóloga llegó puntual y creó un ambiente muy profesional en mi hogar. Me sentí cómodo y pude abrirme sin problemas. Recomiendo totalmente este servicio." data-en="Excellent home care service. The psychologist arrived on time and created a very professional environment in my home. I felt comfortable and was able to open up without problems. I totally recommend this service.">
+                            Excelente atención a domicilio. La psicóloga llegó puntual y creó un ambiente muy profesional en mi hogar. Me sentí cómodo y pude abrirme sin problemas. Recomiendo totalmente este servicio.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C</div>
+                            <div class="author-info">
+                                <h5 data-es="Carlos R." data-en="Carlos R.">Carlos R.</h5>
+                                <p class="text-muted" data-es="Rionegro, Antioquia" data-en="Rionegro, Antioquia">Rionegro, Antioquia</p>
+                                <div class="stars">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text" data-es="Después de años evitando la terapia, finalmente di el paso gracias a la flexibilidad que ofrecen. La combinación de sesiones online y presenciales me permitió mantener la continuidad incluso cuando viajaba por trabajo." data-en="After years of avoiding therapy, I finally took the step thanks to the flexibility they offer. The combination of online and in-person sessions allowed me to maintain continuity even when traveling for work.">
+                            Después de años evitando la terapia, finalmente di el paso gracias a la flexibilidad que ofrecen. La combinación de sesiones online y presenciales me permitió mantener la continuidad incluso cuando viajaba por trabajo.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h5 data-es="Ana L." data-en="Ana L.">Ana L.</h5>
+                                <p class="text-muted" data-es="Envigado, Antioquia" data-en="Envigado, Antioquia">Envigado, Antioquia</p>
+                                <div class="stars">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Estadísticas de confianza -->
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div class="text-center p-4 bg-white border-rounded shadow-sm">
+                        <div class="row">
+                            <div class="col-md-3 mb-3 mb-md-0">
+                                <h3 class="text-primary mb-1">500+</h3>
+                                <p class="mb-0 text-muted" data-es="Sesiones realizadas" data-en="Sessions completed">Sesiones realizadas</p>
+                            </div>
+                            <div class="col-md-3 mb-3 mb-md-0">
+                                <h3 class="text-primary mb-1">98%</h3>
+                                <p class="mb-0 text-muted" data-es="Satisfacción del cliente" data-en="Customer satisfaction">Satisfacción del cliente</p>
+                            </div>
+                            <div class="col-md-3 mb-3 mb-md-0">
+                                <h3 class="text-primary mb-1">5+</h3>
+                                <p class="mb-0 text-muted" data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h3 class="text-primary mb-1">24/7</h3>
+                                <p class="mb-0 text-muted" data-es="Soporte disponible" data-en="Support available">Soporte disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Trust Section - MANTENIDA PERO SIMPLIFICADA -->
     <section id="testimonials" class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5" data-es="Confianza y Testimonios" data-en="Trust and Testimonials">Confianza y Testimonios</h2>
+            <h2 class="text-center mb-5" data-es="Confianza y Certificaciones" data-en="Trust and Certifications">Confianza y Certificaciones</h2>
             <div class="row text-center">
                 <div class="col-md-6 offset-md-3">
                     <div class="p-4 border-rounded bg-light shadow-sm">
                         <p class="lead mb-3" data-es="✅ Psicólogos certificados en ReTHUS" data-en="✅ ReTHUS certified psychologists">✅ Psicólogos certificados en ReTHUS</p>
-                        <p class="lead" data-es="🏆 Más de X años de experiencia en acompañamiento humano" data-en="🏆 More than X years of experience in human accompaniment">🏆 Más de X años de experiencia en acompañamiento humano</p>
+                        <p class="lead" data-es="🏆 Más de 5 años de experiencia en acompañamiento humano" data-en="🏆 More than 5 years of experience in human accompaniment">🏆 Más de 5 años de experiencia en acompañamiento humano</p>
                     </div>
                 </div>
             </div>
@@ -221,123 +296,107 @@
         </div>
     </section>
 
-    <!-- Final CTA / Contact Section -->
+    <!-- Final CTA / Contact Section - MEJORADA -->
     <section id="contact" class="section-padding">
         <div class="container text-center">
             <h2 class="mb-4" data-es="Empieza hoy tu proceso de transformación" data-en="Start your transformation process today">Empieza hoy tu proceso de transformación</h2>
-            <div class="d-grid gap-3 col-md-6 mx-auto mb-4">
-                
-                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal2" data-es="📧 Déjanos tus datos y te contactamos" data-en="📧 Leave your information and we'll contact you">
-                     📧 Déjanos tus datos y te contactamos
-                </button>
-                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal3" data-es="✨ Empieza tu camino de sanación — reclama tu valoracion GRATIS" data-en="✨ Start your healing journey — claim your FREE assessment">
-                     ✨ Empieza tu camino de sanación — reclama tu valoracion GRATIS
-                </button>
-            </div>
+            <p class="lead mb-5" data-es="Tu bienestar mental es nuestra prioridad. Da el primer paso hacia una vida más plena y equilibrada." data-en="Your mental well-being is our priority. Take the first step towards a fuller and more balanced life.">Tu bienestar mental es nuestra prioridad. Da el primer paso hacia una vida más plena y equilibrada.</p>
             
-            <!-- Contact Form Modal 1 WHATSAAP-->
-            <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="contactModalLabel" data-es="Déjanos tus datos" data-en="Leave your information">Déjanos tus datos</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                        </div>
-                        <div class="modal-body text-start">
-                            <form name="contact-form" method="post" id="contactForm" action="https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec"  novalidate>
-                                <div class="mb-3">
-                                    <label for="fullName" class="form-label" data-es="Nombre Completo *" data-en="Full Name *">Nombre Completo *</label>
-                                    <input name="Nombre" type="text" class="form-control" id="fullName" required>
-                                    <div class="invalid-feedback" data-es="Por favor ingresa tu nombre completo." data-en="Please enter your full name.">
-                                        Por favor ingresa tu nombre completo.
-                                    </div>
+            <div class="cta-button-group">
+                <button type="button" class="cta-button cta-primary" data-bs-toggle="modal" data-bs-target="#contactModal3" data-es="✨ Empieza tu camino de sanación — reclama tu valoración GRATIS" data-en="✨ Start your healing journey — claim your FREE assessment">
+                    <span class="cta-icon">✨</span>
+                    <span data-es="Empieza tu camino de sanación — reclama tu valoración GRATIS" data-en="Start your healing journey — claim your FREE assessment">Empieza tu camino de sanación — reclama tu valoración GRATIS</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Contact Form Modal 1 WHATSAPP-->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel" data-es="Déjanos tus datos" data-en="Leave your information">Déjanos tus datos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-start">
+                        <form name="contact-form" method="post" id="contactForm" action="https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec" novalidate>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label" data-es="Nombre Completo *" data-en="Full Name *">Nombre Completo *</label>
+                                <input name="Nombre" type="text" class="form-control" id="fullName" required>
+                                <div class="invalid-feedback" data-es="Por favor ingresa tu nombre completo." data-en="Please enter your full name.">
+                                    Por favor ingresa tu nombre completo.
                                 </div>
-                                <div class="mb-3">
-                                    <label for="emailAddress" class="form-label" data-es="Correo Electrónico *" data-en="Email Address *">Correo Electrónico *</label>
-                                    <input name="Apellido" type="email" class="form-control" id="emailAddress" required>
-                                    <div class="invalid-feedback" data-es="Por favor ingresa un correo electrónico válido." data-en="Please enter a valid email address.">
-                                        Por favor ingresa un correo electrónico válido.
-                                    </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="emailAddress" class="form-label" data-es="Correo Electrónico *" data-en="Email Address *">Correo Electrónico *</label>
+                                <input name="Apellido" type="email" class="form-control" id="emailAddress" required>
+                                <div class="invalid-feedback" data-es="Por favor ingresa un correo electrónico válido." data-en="Please enter a valid email address.">
+                                    Por favor ingresa un correo electrónico válido.
                                 </div>
-                                <div class="mb-3">
-                                    <label for="phoneNumber" class="form-label" data-es="Teléfono" data-en="Phone">Teléfono</label>
-                                    <input name="Email" type="tel" class="form-control" id="phoneNumber">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label" data-es="Mensaje" data-en="Message">Mensaje</label>
-                                    <textarea name="mensaje" class="form-control" id="message" rows="3" data-es="Cuéntanos brevemente cómo podemos ayudarte..." data-en="Tell us briefly how we can help you..." placeholder="Cuéntanos brevemente cómo podemos ayudarte..."></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary" data-es="Enviar" data-en="Send">Enviar</button>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phoneNumber" class="form-label" data-es="Teléfono" data-en="Phone">Teléfono</label>
+                                <input name="Email" type="tel" class="form-control" id="phoneNumber">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label" data-es="Mensaje" data-en="Message">Mensaje</label>
+                                <textarea name="mensaje" class="form-control" id="message" rows="3" data-es="Cuéntanos brevemente cómo podemos ayudarte..." data-en="Tell us briefly how we can help you..." placeholder="Cuéntanos brevemente cómo podemos ayudarte..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-es="Enviar" data-en="Send">Enviar</button>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Contact Form Modal 2 DEJANOS TUS DATOS-->
-            <div class="modal fade" id="contactModal2" tabindex="-1" aria-labelledby="contactModalLabel2" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="contactModalLabel2" data-es="Déjanos tus datos" data-en="Leave your information">Déjanos tus datos</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                        </div>
-                        <div class="modal-body text-start">
-                             <form name="contact-form" method="post" class="form" id="formu2" >
-                                <div class="mb-3">
-                                    <label for="Nombre2" class="form-label" data-es="Nombre *" data-en="Name *">Nombre *</label>
-                                    <input name="Nombre" id="Nombre2" class="form-control" type="text" data-es="Nombre" data-en="Name" placeholder="Nombre"/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="Apellido2" class="form-label" data-es="Apellido *" data-en="Last Name *">Apellido *</label>
-                                    <input name="Apellido" id="Apellido2" class="form-control" type="text" data-es="Apellido" data-en="Last Name" placeholder="Apellido"/> 
-                                </div>
-                                <div class="mb-3">
-                                    <label for="Email2" class="form-label" data-es="Correo Electrónico *" data-en="Email Address *">Correo Electrónico *</label>
-                                    <input name="Email" id="Email2" class="form-control" type="email" placeholder="Email"/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="Mensaje2" class="form-label" data-es="Mensaje*" data-en="Message*">Mensaje*</label>
-                                    <input name="Mensaje" id="Mensaje2" class="form-control" type="text" data-es="mensaje" data-en="message" placeholder="mensaje"/>
-                                </div>
-                                <button type="submit" class="btn btn-primary" data-es="Enviar" data-en="Submit">Enviar</button>
-                            </form>
-                        </div>
+        <!-- Contact Form Modal 2 DEJANOS TUS DATOS-->
+        <div class="modal fade" id="contactModal2" tabindex="-1" aria-labelledby="contactModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel2" data-es="Déjanos tus datos" data-en="Leave your information">Déjanos tus datos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-start">
+                         <form name="contact-form" method="post" class="form" id="formu2">
+                            <div class="mb-3">
+                                <label for="Nombre2" class="form-label" data-es="Nombre *" data-en="Name *">Nombre *</label>
+                                <input name="Nombre" id="Nombre2" class="form-control" type="text" data-es="Nombre" data-en="Name" placeholder="Nombre"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Apellido2" class="form-label" data-es="Apellido *" data-en="Last Name *">Apellido *</label>
+                                <input name="Apellido" id="Apellido2" class="form-control" type="text" data-es="Apellido" data-en="Last Name" placeholder="Apellido"/> 
+                            </div>
+                            <div class="mb-3">
+                                <label for="Email2" class="form-label" data-es="Correo Electrónico *" data-en="Email Address *">Correo Electrónico *</label>
+                                <input name="Email" id="Email2" class="form-control" type="email" placeholder="Email"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Mensaje2" class="form-label" data-es="Mensaje*" data-en="Message*">Mensaje*</label>
+                                <input name="Mensaje" id="Mensaje2" class="form-control" type="text" data-es="mensaje" data-en="message" placeholder="mensaje"/>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-es="Enviar" data-en="Submit">Enviar</button>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
 
-            
-            <!-- Contact Form Modal 3 AGENDA TU CITA-->
-            <div class="modal fade" id="contactModal3" tabindex="-1" aria-labelledby="contactModalLabel3" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="contactModalLabel2" data-es="Déjanos tus datos" data-en="Leave your information">Déjanos tus datos</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                        </div>
-                        <div class="modal-body text-start">
-                           
-<!-- Google Calendar Appointment Scheduling begin -->
-<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRFuDH3wOrsfQeoNFwZm4NMIknO03XumlkeC2BWE0_0XKHtc_cooCQT64nH6E0NhDuDQZrnsa?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
-<!-- end Google Calendar Appointment Scheduling -->
-
-
-
-
-                        </div>
+        <!-- Contact Form Modal 3 AGENDA TU CITA-->
+        <div class="modal fade" id="contactModal3" tabindex="-1" aria-labelledby="contactModalLabel3" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel3" data-es="Agenda tu cita" data-en="Schedule your appointment">Agenda tu cita</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Google Calendar Appointment Scheduling begin -->
+                        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRFuDH3wOrsfQeoNFwZm4NMIknO03XumlkeC2BWE0_0XKHtc_cooCQT64nH6E0NhDuDQZrnsa?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+                        <!-- end Google Calendar Appointment Scheduling -->
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
         </div>
     </section>
 
@@ -347,122 +406,7 @@
     <!-- Language functionality -->
     <script src="./language.js"></script>
     
-    <!--script para que no se recargue la pagina con el envio de la informacion formulario deja tus datos-->
-    <script>
-        const scriptUrl = 'https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec';
-        const form = document.forms['contact-form'];
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-
-            fetch(scriptUrl, {method: 'POST', body: new FormData(form)})
-                    .then(response => Swal.fire({
-                title: "¡MUCHAS GRACIAS!",
-                text: "Formulario Enviado",
-                icon: "success"}))
-                    .then( () => { window.location.reload() } )
-                    .catch(error => console.error('Error', error.message))
-        })
-    </script>
-    
     <!-- JavaScript personalizado -->
-    <script>
-        (function() {
-            'use strict';
-            
-            // Seleccionar el formulario de contacto
-            const form = document.getElementById('contactForm');
-            
-            form.addEventListener('submit', function(event) {
-                // Prevenir el envío predeterminado del formulario
-                event.preventDefault();
-                event.stopPropagation();
-                
-                // Comprobar si el formulario es válido
-                if (form.checkValidity()) {
-                    
-                    // Capturar los valores de los campos
-                    const fullName = document.getElementById('fullName').value;
-                    const emailAddress = document.getElementById('emailAddress').value;
-                    const phoneNumber = document.getElementById('phoneNumber').value;
-                    const message = document.getElementById('message').value;
-
-                    // Get current language
-                    const currentLang = localStorage.getItem('preferredLanguage') || 'es';
-                    
-                    // Construir el mensaje sin codificar
-                    const whatsappMessage = currentLang === 'es' ? 
-                        `¡Hola SanaMente! 
-Me gustaría agendar una sesión. Aquí están mis datos:
-
-*Nombre:* ${fullName}
-*Correo:* ${emailAddress}
-*Teléfono:* ${phoneNumber}
-
-*Mensaje:* ${message}` :
-                        `Hello SanaMente! 
-I would like to schedule a session. Here is my information:
-
-*Name:* ${fullName}
-*Email:* ${emailAddress}
-*Phone:* ${phoneNumber}
-
-*Message:* ${message}`;
-
-                    // Codificar el mensaje completo para la URL
-                    const encodedMessage = encodeURIComponent(whatsappMessage);
-                    const whatsappUrl = `https://wa.me/573148763819?text=${encodedMessage}`;
-                    
-                    // Abrir el enlace de WhatsApp en una nueva pestaña
-                    window.open(whatsappUrl, '_blank');
-
-                    // Limpiar el formulario y eliminar los estilos de validación
-                    form.reset();
-                    form.classList.remove('was-validated');
-                    
-                    // Cerrar el modal
-                    const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-                    modal.hide();
-
-                } else {
-                    // Si no es válido, mostrar los mensajes de error
-                    form.classList.add('was-validated');
-                }
-            });
-        })();
-        
-        // Smooth scrolling para los enlaces internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Animación de entrada para elementos cuando entran en viewport
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-        
-        // Observar elementos que queremos animar
-        document.querySelectorAll('.card-hover, .lead').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>

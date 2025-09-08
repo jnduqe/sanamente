@@ -1,274 +1,284 @@
-// Language functionality for SanaMente website
-class LanguageManager {
-    constructor() {
-        this.currentLanguage = localStorage.getItem('preferredLanguage') || 'es';
-        this.languageBtn = null;
-        this.currentLangSpan = null;
-        this.otherLangSpan = null;
-        
-        // Initialize when DOM is loaded
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => this.init());
-        } else {
-            this.init();
-        }
-    }
+// Language Management System for SanaMente Website
+// Standalone language switching functionality
+
+(function() {
+    'use strict';
     
-    init() {
-        this.languageBtn = document.getElementById('languageBtn');
-        this.currentLangSpan = document.getElementById('currentLang');
-        this.otherLangSpan = document.getElementById('otherLang');
+    // Language Manager Object
+    const LanguageManager = {
+        // Current language state
+        currentLanguage: localStorage.getItem('preferredLanguage') || 'es',
         
-        if (!this.languageBtn || !this.currentLangSpan || !this.otherLangSpan) {
-            console.error('Language toggle elements not found');
-            return;
-        }
+        // Available languages
+        availableLanguages: ['es', 'en'],
         
-        // Set initial language
-        this.setLanguage(this.currentLanguage, false);
+        // Initialize the language system
+        init() {
+            this.createLanguageButton();
+            this.bindEvents();
+            this.applyLanguage(this.currentLanguage);
+            console.log('Language system initialized with language:', this.currentLanguage);
+        },
         
-        // Add click event listener
-        this.languageBtn.addEventListener('click', () => this.toggleLanguage());
-        
-        // Add keyboard support
-        this.languageBtn.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.toggleLanguage();
+        // Create language toggle button if it doesn't exist
+        createLanguageButton() {
+            let existingToggle = document.querySelector('.language-toggle');
+            
+            if (!existingToggle) {
+                const toggleContainer = document.createElement('div');
+                toggleContainer.className = 'language-toggle';
+                
+                const button = document.createElement('button');
+                button.id = 'languageBtn';
+                button.className = 'btn btn-outline-primary btn-sm';
+                button.innerHTML = `
+                    <span id="currentLang">ES</span> | <span id="otherLang">EN</span>
+                `;
+                
+                toggleContainer.appendChild(button);
+                document.body.appendChild(toggleContainer);
             }
-        });
-    }
-    
-    toggleLanguage() {
-        const newLanguage = this.currentLanguage === 'es' ? 'en' : 'es';
-        this.setLanguage(newLanguage, true);
-    }
-    
-    setLanguage(language, animate = false) {
-        // Validate language
-        if (!['es', 'en'].includes(language)) {
-            console.error('Invalid language:', language);
-            return;
-        }
+            
+            this.updateLanguageButton();
+        },
         
-        this.currentLanguage = language;
+        // Bind event listeners
+        bindEvents() {
+            const languageBtn = document.getElementById('languageBtn');
+            
+            if (languageBtn) {
+                languageBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.toggleLanguage();
+                });
+                
+                // Add keyboard support
+                languageBtn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.toggleLanguage();
+                    }
+                });
+            }
+        },
         
-        // Save preference
-        localStorage.setItem('preferredLanguage', language);
+        // Toggle between languages
+        toggleLanguage() {
+            const currentIndex = this.availableLanguages.indexOf(this.currentLanguage);
+            const nextIndex = (currentIndex + 1) % this.availableLanguages.length;
+            const newLanguage = this.availableLanguages[nextIndex];
+            
+            this.setLanguage(newLanguage);
+        },
         
-        // Update HTML lang attribute
-        document.documentElement.setAttribute('lang', language);
-        document.getElementById('html-lang').setAttribute('lang', language);
+        // Set specific language
+        setLanguage(lang) {
+            if (!this.availableLanguages.includes(lang)) {
+                console.warn(`Language "${lang}" not supported. Available: ${this.availableLanguages.join(', ')}`);
+                return;
+            }
+            
+            const previousLanguage = this.currentLanguage;
+            this.currentLanguage = lang;
+            
+            // Save to localStorage
+            localStorage.setItem('preferredLanguage', lang);
+            
+            // Update UI
+            this.updateLanguageButton();
+            this.applyLanguage(lang);
+            
+            // Dispatch custom event
+            this.dispatchLanguageChangeEvent(lang, previousLanguage);
+            
+            console.log(`Language changed from ${previousLanguage} to ${lang}`);
+        },
         
-        // Add animation class if requested
-        if (animate) {
-            document.body.classList.add('language-switching');
-            setTimeout(() => {
-                document.body.classList.remove('language-switching');
-            }, 500);
-        }
-        
-        // Update button text
-        this.updateLanguageButton();
-        
-        // Update all content
-        this.updateContent();
-        
-        // Update meta tags
-        this.updateMetaTags();
-        
-        // Update form placeholders
-        this.updateFormPlaceholders();
-        
-        // Fire custom event
-        document.dispatchEvent(new CustomEvent('languageChanged', {
-            detail: { language: language }
-        }));
-    }
-    
-    updateLanguageButton() {
-        if (this.currentLanguage === 'es') {
-            this.currentLangSpan.textContent = 'ES';
-            this.otherLangSpan.textContent = 'EN';
-        } else {
-            this.currentLangSpan.textContent = 'EN';
-            this.otherLangSpan.textContent = 'ES';
-        }
-    }
-    
-    updateContent() {
-        const elements = document.querySelectorAll('[data-es][data-en]');
-        
-        elements.forEach(element => {
-            const content = element.getAttribute(`data-${this.currentLanguage}`);
-            if (content) {
-                // Handle different element types
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.placeholder = content;
-                } else if (element.hasAttribute('title')) {
-                    element.title = content;
+        // Update the language button display
+        updateLanguageButton() {
+            const currentLangSpan = document.getElementById('currentLang');
+            const otherLangSpan = document.getElementById('otherLang');
+            
+            if (currentLangSpan && otherLangSpan) {
+                if (this.currentLanguage === 'es') {
+                    currentLangSpan.textContent = 'ES';
+                    otherLangSpan.textContent = 'EN';
                 } else {
-                    element.textContent = content;
+                    currentLangSpan.textContent = 'EN';
+                    otherLangSpan.textContent = 'ES';
                 }
             }
-        });
-    }
-    
-    updateMetaTags() {
-        const metaTags = document.querySelectorAll('meta[data-es][data-en], title[data-es][data-en]');
+        },
         
-        metaTags.forEach(tag => {
-            const content = tag.getAttribute(`data-${this.currentLanguage}`);
-            if (content) {
-                if (tag.tagName === 'TITLE') {
-                    tag.textContent = content;
-                } else if (tag.hasAttribute('content')) {
-                    tag.setAttribute('content', content);
+        // Apply language to all elements
+        applyLanguage(lang) {
+            // Add transition class
+            document.body.classList.add('language-changing');
+            
+            // Small delay for smooth transition
+            setTimeout(() => {
+                // Update elements with data attributes
+                const elements = document.querySelectorAll('[data-es][data-en]');
+                
+                elements.forEach(element => {
+                    const content = element.getAttribute(`data-${lang}`);
+                    
+                    if (content) {
+                        // Handle different element types
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.placeholder = content;
+                        } else if (element.hasAttribute('content')) {
+                            element.setAttribute('content', content);
+                        } else if (element.tagName === 'TITLE') {
+                            element.textContent = content;
+                            document.title = content;
+                        } else if (element.hasAttribute('alt')) {
+                            element.alt = content;
+                        } else if (element.hasAttribute('aria-label')) {
+                            element.setAttribute('aria-label', content);
+                        } else {
+                            element.textContent = content;
+                        }
+                    }
+                });
+                
+                // Update HTML lang attribute
+                document.documentElement.lang = lang;
+                
+                // Update meta tags
+                this.updateMetaTags(lang);
+                
+                // Remove transition class
+                document.body.classList.remove('language-changing');
+                
+            }, 100);
+        },
+        
+        // Update meta tags based on language
+        updateMetaTags(lang) {
+            const metaElements = document.querySelectorAll('meta[data-es][data-en]');
+            
+            metaElements.forEach(meta => {
+                const content = meta.getAttribute(`data-${lang}`);
+                if (content) {
+                    meta.setAttribute('content', content);
                 }
-            }
-        });
-    }
-    
-    updateFormPlaceholders() {
-        const formElements = document.querySelectorAll('input[data-es][data-en], textarea[data-es][data-en]');
+            });
+        },
         
-        formElements.forEach(element => {
-            const placeholder = element.getAttribute(`data-${this.currentLanguage}`);
-            if (placeholder) {
-                element.setAttribute('placeholder', placeholder);
-            }
-        });
-    }
-    
-    // Public method to get current language
-    getCurrentLanguage() {
-        return this.currentLanguage;
-    }
-    
-    // Public method to check if language is supported
-    isLanguageSupported(language) {
-        return ['es', 'en'].includes(language);
-    }
-    
-    // Method to get translations for dynamic content
-    getTranslation(key) {
-        const translations = {
-            es: {
-                'form_success_title': '¡MUCHAS GRACIAS!',
-                'form_success_text': 'Formulario Enviado',
-                'whatsapp_greeting': '¡Hola SanaMente!',
-                'whatsapp_message_intro': 'Me gustaría agendar una sesión. Aquí están mis datos:',
-                'whatsapp_name': '*Nombre:*',
-                'whatsapp_email': '*Correo:*',
-                'whatsapp_phone': '*Teléfono:*',
-                'whatsapp_message': '*Mensaje:*',
-                'validation_name': 'Por favor ingresa tu nombre completo.',
-                'validation_email': 'Por favor ingresa un correo electrónico válido.',
-                'close': 'Cerrar'
-            },
-            en: {
-                'form_success_title': 'THANK YOU VERY MUCH!',
-                'form_success_text': 'Form Submitted',
-                'whatsapp_greeting': 'Hello SanaMente!',
-                'whatsapp_message_intro': 'I would like to schedule a session. Here is my information:',
-                'whatsapp_name': '*Name:*',
-                'whatsapp_email': '*Email:*',
-                'whatsapp_phone': '*Phone:*',
-                'whatsapp_message': '*Message:*',
-                'validation_name': 'Please enter your full name.',
-                'validation_email': 'Please enter a valid email address.',
-                'close': 'Close'
-            }
-        };
-        
-        return translations[this.currentLanguage]?.[key] || key;
-    }
-}
-
-// Create global instance
-const languageManager = new LanguageManager();
-
-// Export for use in other scripts
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = LanguageManager;
-}
-
-// Enhanced form handling with language support
-document.addEventListener('DOMContentLoaded', function() {
-    // Update SweetAlert messages based on language
-    const originalScriptUrl = 'https://script.google.com/macros/s/AKfycbzcx-roLPgPDpJYqPrzm9GipeUadsQ8hbShS7ciHHeODn5uMpA_o0XGOfxZDe_kqNJGqg/exec';
-    
-    // Override the form submission for form2
-    const form2 = document.getElementById('formu2');
-    if (form2) {
-        form2.addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Dispatch language change event
+        dispatchLanguageChangeEvent(newLang, previousLang) {
+            const event = new CustomEvent('languageChanged', {
+                detail: {
+                    language: newLang,
+                    previousLanguage: previousLang,
+                    timestamp: new Date().toISOString()
+                },
+                bubbles: true,
+                cancelable: true
+            });
             
-            const formData = new FormData(this);
+            document.dispatchEvent(event);
+        },
+        
+        // Get current language
+        getCurrentLanguage() {
+            return this.currentLanguage;
+        },
+        
+        // Get available languages
+        getAvailableLanguages() {
+            return [...this.availableLanguages];
+        },
+        
+        // Check if language is supported
+        isLanguageSupported(lang) {
+            return this.availableLanguages.includes(lang);
+        },
+        
+        // Get translated text for specific key
+        getText(key, lang = null) {
+            const targetLang = lang || this.currentLanguage;
+            const element = document.querySelector(`[data-key="${key}"]`);
             
-            fetch(originalScriptUrl, {method: 'POST', body: formData})
-                .then(response => {
-                    Swal.fire({
-                        title: languageManager.getTranslation('form_success_title'),
-                        text: languageManager.getTranslation('form_success_text'),
-                        icon: "success"
-                    });
-                })
-                .then(() => { 
-                    window.location.reload(); 
-                })
-                .catch(error => console.error('Error', error.message));
-        });
-    }
-    
-    // Update validation messages when language changes
-    document.addEventListener('languageChanged', function() {
-        const invalidFeedbacks = document.querySelectorAll('.invalid-feedback');
-        invalidFeedbacks.forEach(feedback => {
-            if (feedback.hasAttribute('data-es') && feedback.hasAttribute('data-en')) {
-                feedback.textContent = feedback.getAttribute(`data-${languageManager.getCurrentLanguage()}`);
+            if (element) {
+                return element.getAttribute(`data-${targetLang}`);
             }
-        });
-    });
+            
+            return null;
+        },
+        
+        // Add new language (for future expansion)
+        addLanguage(langCode, langName) {
+            if (!this.availableLanguages.includes(langCode)) {
+                this.availableLanguages.push(langCode);
+                console.log(`Added language: ${langCode} (${langName})`);
+            }
+        },
+        
+        // Set language from URL parameter
+        setLanguageFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            
+            if (langParam && this.isLanguageSupported(langParam)) {
+                this.setLanguage(langParam);
+            }
+        },
+        
+        // Browser language detection
+        detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const primaryLang = browserLang.split('-')[0];
+            
+            if (this.isLanguageSupported(primaryLang)) {
+                return primaryLang;
+            }
+            
+            return 'es'; // Default fallback
+        },
+        
+        // Auto-detect and set language on first visit
+        autoDetectLanguage() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            
+            if (!savedLang) {
+                const detectedLang = this.detectBrowserLanguage();
+                this.setLanguage(detectedLang);
+                console.log('Auto-detected language:', detectedLang);
+            }
+        }
+    };
     
-    // Update modal aria-label for close button
-    document.addEventListener('languageChanged', function() {
-        const closeButtons = document.querySelectorAll('.btn-close');
-        closeButtons.forEach(button => {
-            button.setAttribute('aria-label', languageManager.getTranslation('close'));
-        });
-    });
-});
-
-// Accessibility improvements
-document.addEventListener('DOMContentLoaded', function() {
-    const languageBtn = document.getElementById('languageBtn');
-    if (languageBtn) {
-        // Add ARIA attributes
-        languageBtn.setAttribute('aria-label', 'Toggle language between Spanish and English');
-        languageBtn.setAttribute('role', 'button');
-        languageBtn.setAttribute('tabindex', '0');
-        
-        // Update ARIA label when language changes
-        document.addEventListener('languageChanged', function(e) {
-            const newLang = e.detail.language;
-            const ariaLabel = newLang === 'es' 
-                ? 'Cambiar idioma entre español e inglés'
-                : 'Toggle language between Spanish and English';
-            languageBtn.setAttribute('aria-label', ariaLabel);
-        });
-    }
-});
-
-// Detect browser language preference on first visit
-document.addEventListener('DOMContentLoaded', function() {
-    // Only set language based on browser if no preference is stored
-    if (!localStorage.getItem('preferredLanguage')) {
-        const browserLang = navigator.language || navigator.userLanguage;
-        const langCode = browserLang.split('-')[0];
-        
-        if (languageManager.isLanguageSupported(langCode)) {
-            languageManager.setLanguage(langCode, false);
+    // Auto-initialize when DOM is ready
+    function initializeLanguageSystem() {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                LanguageManager.init();
+                LanguageManager.setLanguageFromURL();
+            });
+        } else {
+            LanguageManager.init();
+            LanguageManager.setLanguageFromURL();
         }
     }
-});
+    
+    // Initialize immediately
+    initializeLanguageSystem();
+    
+    // Export to global scope
+    window.languageManager = LanguageManager;
+    
+    // Export for module systems
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = LanguageManager;
+    }
+    
+    // Export for AMD
+    if (typeof define === 'function' && define.amd) {
+        define(function() {
+            return LanguageManager;
+        });
+    }
+    
+})();
