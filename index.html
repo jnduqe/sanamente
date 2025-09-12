@@ -34,6 +34,12 @@
             <span id="currentLang">ES</span> | <span id="otherLang">EN</span>
         </button>
     </div>
+<!-- Loggin Button -->
+    <div class="login-button">
+    <button id="loginBtn" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <span data-es="Iniciar Sesión" data-en="Login">Iniciar Sesión</span>
+    </button>
+    </div>
 
     <!-- Hero Section -->
     <section id="hero" class="d-flex align-items-center justify-content-center text-center text-white position-relative" style="background-image: url('./sanamante_hero.png'); background-size: cover; background-position: center; height: 100vh;">
@@ -394,6 +400,33 @@
                         <!-- Google Calendar Appointment Scheduling begin -->
                         <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRFuDH3wOrsfQeoNFwZm4NMIknO03XumlkeC2BWE0_0XKHtc_cooCQT64nH6E0NhDuDQZrnsa?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
                         <!-- end Google Calendar Appointment Scheduling -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        
+                        <h5 class="modal-title" id="loginModalLabel" data-es="Iniciar Sesión" data-en="Login">Iniciar Sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-start">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="loginEmail" class="form-label" data-es="Email" data-en="Email">Email</label>
+                                <input type="email" class="form-control" id="loginEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="loginPassword" class="form-label" data-es="Contraseña" data-en="Password">Contraseña</label>
+                                <input type="password" class="form-control" id="loginPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100" data-es="Iniciar Sesión" data-en="Login">Iniciar Sesión</button>
+                        </form>
                     </div>
                 </div>
             </div>

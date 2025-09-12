@@ -583,8 +583,13 @@ body {
         top: 15px;
         right: 15px;
     }
-    
-    #languageBtn {
+ 
+    .login-button {
+    top: 15px;
+    left: 15px; 
+    }
+
+    #languageBtn, #loginBtn {
         font-size: 0.75rem;
         padding: 6px 12px;
     }
@@ -713,3 +718,60 @@ img {
         transition: none;
     }
 }
+
+/* Login Button Styles */
+.login-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+#loginBtn {
+    border: 2px solid var(--nude-accent);
+    background: transparent;
+    color: var(--nude-accent);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+#loginBtn:hover,
+#loginBtn:focus {
+    background-color: var(--nude-accent);
+    color: white;
+    border-color: var(--nude-accent);
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+/* Custom close button position */
+.modal-header .btn-close {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Asegurar que los modales aparezcan por encima de todos los elementos */
+.modal {
+    z-index: 10050 !important;
+}
+
+.modal-backdrop {
+    z-index: 10040 !important;
+}
+
